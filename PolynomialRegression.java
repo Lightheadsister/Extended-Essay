@@ -123,7 +123,7 @@ public class PolynomialRegression {
             double predictedY = predict(xValue);
             double actualY = function(xValue);
             double error = (predictedY - actualY) / actualY;
-            System.out.println(error);
+            System.out.println("x=" + xValue + ", Predicted y=" + predictedY + ", Actual y=" + actualY + ", Relative Error=" + error);
             totalError += Math.abs(error);
             count++;
         }
