@@ -131,7 +131,8 @@ public class KFoldCV {
             double error = (predicted - ys[testIndex]) / ys[testIndex];
             errors[fold] = error;
 
-            System.out.println( error);
+            System.out.println("Fold " + (fold + 1) + ", Test x=" + xs[testIndex] +
+            		", Predicted y=" + predicted + ", Actual y=" + ys[testIndex] + ", Error=" + error);
         }
 
         double avgError = Arrays.stream(errors).average().getAsDouble();
